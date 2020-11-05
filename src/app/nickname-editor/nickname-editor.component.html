@@ -1,0 +1,26 @@
+<div class="editor-panel">
+    <form [formGroup]="nicknameEditorForm" (ngSubmit)="onSubmit()">
+
+        <div formArrayName="nicknames" class="nickname-container">
+            <h3>Nickname editor</h3>
+            <div class="add-container">
+                <button type="button" (click)="addnickname()">Add Nickname</button>
+            </div>
+            <div *ngFor="let nickname of nicknames.controls; let i=index">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nickname {{i + 1}}:</mat-label>
+                    <input type="text" [formControlName]="i" placeholder="Enter nickname" matInput />
+                </mat-form-field>
+
+                <mat-error *ngIf="nicknames.controls[i]?.errors?.nNameInValid">
+                    Nickname is <strong>invalid</strong>
+                </mat-error>
+            </div>
+        </div>
+
+        <div class="submit-container" *ngIf="nicknames.controls.length > 0">
+            <button type="submit" [disabled]="!nicknameEditorForm.valid">Submit</button>
+        </div>
+    </form>
+
+</div>

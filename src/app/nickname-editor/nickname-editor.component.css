@@ -1,0 +1,13 @@
+:host {
+    width: 40%;
+    float: left;
+}
+
+.mat-error {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.mat-h3, h3 {
+    font: 600 16px/28px Roboto, "Helvetica Neue", sans-serif;
+}
