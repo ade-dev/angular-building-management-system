@@ -1,4 +1,6 @@
-# BuildingMngmtAde
+# Building management system with nickname editor
+
+A demo angular application by Ade Oyebadejo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
